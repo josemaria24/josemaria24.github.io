@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Index</title>
+<link href="../css/estilo.css" rel="stylesheet" type="text/css">
+ <style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+ </style>	
+	
+</head>
+
+<body>
+	
+<header>
+<img src="../medios/imagenes/logo.jpg" width="395" height="150" alt=""/> 
+</header>
+<nav>
+		<a href="../Index.html">INICIO</a>
+		<a href="La_Familia.html">LA FAMILIA BELLO</a>
+		<a href="Don_Jose.html">DON JOSÉ LUIS BELLO Y ZETTINA</a>
+		<a href="La_Casa.html">LA CASA</a>
+		<a href="Colecciones.html">COLECCIONES</a>
+</nav>
+<main>
+  <section>
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+		  <div class="numbertext">1 / 3</div>
+ 	 		<img src="../medios/imagenes/banner1.jpg" width="1140" height="500" alt="" style="widht:50%"/>
+		 	<div class="text">LA FAMILIA BELLO</div>
+		</div>
+
+		<div class="mySlides fade">
+  			<div class="numbertext">2 / 3</div>
+  			<img src="../medios/imagenes/banner2.jpg" width="1140" height="500" alt="" style="widht:100%"/>
+  			<div class="text">LA CASA</div>
+		</div>
+
+		<div class="mySlides fade">
+  			<div class="numbertext">3 / 3</div>
+  			<img src="../medios/imagenes/banner3.jpg" width="1140" height="500" alt="" style="widht:100%"/>
+			<div class="text">COLLECCIONES</div>
+		</div>
+	
+
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+	</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+  </section>
+  <section id="parrafo">
+    <p>&nbsp;</p>
+	  <p>El <b>Museo José Luis Bello y Zettina</b> es una institución de beneficiencia privada. Su riqueza principal es la colección
+	    pictórica de más de 160 obras en las cuales predomina la técnica al óleo, excelentes acuarelas, notable colección
+	    de miniaturas y una serie de grabados de gran importancia. </p>
+<p>Contiene también bellísimas esculturas de bronce y tallas en madera de orden religioso.
+</p>
+	 <p>Esta casa museo conserva su mobiliario original del siglo XIX, procedencia europea principalmente. Su acervo se
+enriquece con una serie de objetos de plata, bronce, cristal, marfil, porcelana, etc. 
+</p>
+  <img src="../medios/imagenes/Recurso 1-100.jpg" alt="" width="78%" height="53%" class="lineainde"/>  </section>
+<section id="linea"> </section>
+	<section>
+	<h2>Noche de Museos&nbsp;</h2>
+		<p class="p14"><img src="../medios/imagenes/imagen1.jpg" alt="" width="500" height="500" class="foto_1"/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident atque eveniet cupiditate repudiandae, corporis obcaecati culpa molestiae maiores dolor, ratione quos velit quibusdam ipsa, eaque iste veniam ea. Dolores perferendis maxime impedit sunt veritatis eius porro et corrupti cum, id quia pariatur temporibus nisi eaque quos quasi, recusandae mollitia neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident atque eveniet cupiditate repudiandae, corporis obcaecati culpa molestiae maiores dolor, ratione quos velit quibusdam ipsa, eaque iste veniam ea. Dolores perferendis maxime impedit sunt veritatis eius porro et corrupti cum, id quia pariatur temporibus nisi eaque quos quasi, recusandae mollitia Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, laudantium, perspiciatis? Porro, suscipit vero. Quis excepturi ipsum incidunt, modi in, quia, asperiores sequi accusamus minus consequuntur tenetur, adipisci voluptate vel!</p>
+	</section>
+	<section>
+	<h2 id="subtitulo">Nuevos Artístas&nbsp;</h2>
+		<p class="p15"><img src="../medios/imagenes/imagen2.jpg" alt="" width="500" height="500" class="foto_2"/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident atque eveniet cupiditate repudiandae, corporis obcaecati culpa molestiae maiores dolor, ratione quos velit quibusdam ipsa, eaque iste veniam ea. Dolores perferendis maxime impedit sunt veritatis eius porro et corrupti cum, id quia pariatur temporibus nisi eaque quos quasi, recusandae mollitia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos laudantium earum voluptatum ut. Atque quisquam cupiditate recusandae, quibusdam soluta odit, quo at eaque reprehenderit perspiciatis fuga, labore ipsam eligendi? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis est, ut asperiores sit rerum blanditiis magni quae animi distinctio eum rem, quisquam similique sint, explicabo atque optio maiores nisi mollitia? </p>
+	</section>
+<section>
+	<img src="../medios/imagenes/MUSEO JOSE LUIS BELLO Y ZETINA1.jpg" alt="" width="1610" height="554" id="banner"/> </section>
+</main>
+<footer>
+		<a href="../Index.html">INICIO</a>
+	<a href="Informacion.html">INFORMACIÓN</a>
+	<a href="Servicios.html">SERVICIOS</a>
+	<a href="Contacto.html">CONTACTO</a>
+  <h5>
+	 <p>5 de Mayo 409, Centro
+    Puebla, Pue. 72000 México</p>
+<p>Tel +52 (222) 232 4720
+  contacto@museobello.org</p></h5>
+</footer>
+</body>
+</html>
